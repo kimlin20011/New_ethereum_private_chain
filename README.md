@@ -7,14 +7,14 @@ geth --datadir ./data/ init genesis.json
 * with web socket(新版本 ～for 1.19)
 
 ```shell=
-geth --datadir data --networkid 33 --ws --ws.addr "0.0.0.0" --ws.api "eth,web3,personal,debug,admin,miner,net,shh,txpool" --ws.port 8546 --ws.origins "*" --http --shh --http.port 8545 --http.corsdomain "*" --http.api  "eth,web3,personal,debug,admin,miner,net,shh,txpool" --nodiscover console
+geth --datadir data --networkid 33 --ws --ws.addr "0.0.0.0" --ws.api "eth,web3,personal,debug,admin,miner,net,txpool" --ws.port 8546 --ws.origins "*" --http --http.port 8545 --http.corsdomain "*" --http.api  "eth,web3,personal,debug,admin,miner,net,txpool" --allow-insecure-unlock  --nodiscover console
 ```
 
 
 * 輕節點with web socket(新版本 ～for 1.19)
 
 ```shell=
-geth --datadir data --networkid 33 --ws --ws.addr "0.0.0.0" --ws.api "eth,web3,personal,debug,admin,miner,net,shh,txpool" --syncmode="light" --ws.port 8546 --ws.origins "*" --http --shh --http.port 8545 --http.corsdomain "*" --http.api  "eth,web3,personal,debug,admin,miner,net,shh,txpool" --nodiscover console
+geth --datadir data --networkid 33 --ws --ws.addr "0.0.0.0" --ws.api "eth,web3,personal,debug,admin,miner,net,txpool" --syncmode="light" --ws.port 8546 --ws.origins "*" --http --http.port 8545 --http.corsdomain "*" --http.api  "eth,web3,personal,debug,admin,miner,net,txpool" --allow-insecure-unlock --nodiscover console
 ```
 
 * 另一個終端機連綫至geth
